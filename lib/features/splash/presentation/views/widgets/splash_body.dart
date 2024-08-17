@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:folio/constants.dart';
 import 'package:folio/core/assets.dart';
+import 'package:get/get.dart';
+
+import '../../../../home/views/home_page.dart';
 class SplashBody extends StatefulWidget {
   const SplashBody({super.key});
 
@@ -15,6 +19,7 @@ class _SplashBodyState extends State<SplashBody> with SingleTickerProviderStateM
   void initState() {
     super.initState();
     initAnimation();
+    navigateToHomePage();
   }
   
   @override
@@ -48,11 +53,17 @@ class _SplashBodyState extends State<SplashBody> with SingleTickerProviderStateM
       ),
     );
   }
-  
+
+  void navigateToHomePage(){
+    Future.delayed(const Duration(seconds: 3) , (){
+      Get.to(const HomeView(),transition: Transition.leftToRightWithFade , duration: kTransition);
+    });
+  }
+
   void initAnimation(){
      animationController = AnimationController(
          vsync: this ,
-       duration: const Duration(seconds: 3)
+       duration: const Duration(seconds: 2)
      );
      animation = Tween<Offset>(begin: const Offset(2,0) ,end: Offset.zero).animate(animationController);
      animationController.forward();
