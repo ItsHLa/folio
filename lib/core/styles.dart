@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 // we put here the most common styles in size and fontWeight
 abstract class Styles{
