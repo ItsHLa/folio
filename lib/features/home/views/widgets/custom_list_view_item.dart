@@ -9,7 +9,6 @@ class CustomFeaturedBookItem extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 9 / 16 ,
       child: Container(
-        width: 100,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
             image: const DecorationImage(
