@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../core/assets.dart';
+import 'customized_app_bar.dart';
+import 'featured_book_list_view.dart';
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
 
@@ -10,25 +10,9 @@ class HomeViewBody extends StatelessWidget {
     return  const Column(
       children: [
         CustomizeAppBar(),
+        FeaturedBooksListView()
       ],
     );
   }
 }
 
-class CustomizeAppBar extends StatelessWidget {
-  const CustomizeAppBar({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8.0 , vertical: 16),
-      child: Row(
-        children: [
-          Image.asset(AssetsData.logoApp , height: 100, width: 100,),
-          const Spacer(),
-          IconButton(onPressed: (){}, icon: const Icon(Icons.search))
-        ],
-      ),
-    );
-  }
-}
