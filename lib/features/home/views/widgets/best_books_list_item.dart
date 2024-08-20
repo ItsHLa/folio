@@ -6,7 +6,8 @@ import 'package:folio/core/styles.dart';
 import 'book_rating.dart';
 
 class BestBooksListItem extends StatelessWidget {
-  const BestBooksListItem({super.key});
+  const BestBooksListItem({super.key, required this.price});
+  final String price;
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +20,9 @@ class BestBooksListItem extends StatelessWidget {
             child: AspectRatio(
               aspectRatio: 9 / 16,
               child: Container(
-                decoration: const BoxDecoration(
-                    image: DecorationImage(
+                decoration:  BoxDecoration(
+                  borderRadius: BorderRadius.circular(16),
+                    image: const DecorationImage(
                         fit: BoxFit.fill,
                         image: AssetImage(AssetsData.test_logoApp))
                 ),
@@ -48,7 +50,7 @@ class BestBooksListItem extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    Text('19.9',style: Styles.textStyle20.copyWith(fontWeight: FontWeight.bold),),
+                    Text('$price',style: Styles.textStyle20.copyWith(fontWeight: FontWeight.bold),),
                     const Spacer(),
                     const BookRating()
                   ],

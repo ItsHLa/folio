@@ -7,7 +7,15 @@ class BestBookListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-        itemBuilder: (context, index) => const BestBooksListItem(),
+      padding: EdgeInsets.zero,
+        itemBuilder: (context, index) {
+          if(index %2 == 0){
+            return const BestBooksListItem(price: 'free',);
+          }else{
+            return const BestBooksListItem(price: '19.99',);
+          }
+        }
+        ,
     );
   }
 }
