@@ -7,13 +7,11 @@ class BestBookListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+     // shrinkWrap: true  ,to let ListView.builder know all elements (make the list know its high)
+      physics: const NeverScrollableScrollPhysics(),//to let it wont scroll the ui must scroll
       padding: EdgeInsets.zero,
         itemBuilder: (context, index) {
-          if(index %2 == 0){
             return const BestBooksListItem(price: 'free',);
-          }else{
-            return const BestBooksListItem(price: '19.99',);
-          }
         }
         ,
     );

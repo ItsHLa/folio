@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/assets.dart';
+import '../../../../core/utils/assets.dart';
 class CustomFeaturedBookItem extends StatelessWidget {
   const CustomFeaturedBookItem({super.key});
 

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:folio/constants.dart';
-import 'package:folio/core/assets.dart';
-import 'package:get/get.dart';
+import 'package:folio/core/utils/app_router.dart';
+import 'package:folio/core/utils/assets.dart';
+import 'package:go_router/go_router.dart';
 
-import '../../../../home/views/home_page.dart';
 class SplashBody extends StatefulWidget {
   const SplashBody({super.key});
 
@@ -56,7 +55,8 @@ class _SplashBodyState extends State<SplashBody> with SingleTickerProviderStateM
 
   void navigateToHomePage(){
     Future.delayed(const Duration(seconds: 3) , (){
-      Get.to(()=>const HomeView(),transition: Transition.leftToRightWithFade , duration: kTransitionDuration);
+      GoRouter.of(context).push(AppRouter.kHomePath);
+     // Get.to(const HomeView(),transition: Transition.leftToRightWithFade , duration: kTransitionDuration);
     });
   }
 
