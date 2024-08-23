@@ -1,7 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:folio/features/home/views/widgets/custom_list_view_item.dart';
+import 'package:folio/features/home/views/widgets/book_Image.dart';
 
+import '../../../../core/utils/styles.dart';
 import 'books_details_appBar.dart';
 class BookDetailsBody extends StatelessWidget {
   const BookDetailsBody({super.key});
@@ -14,10 +14,29 @@ class BookDetailsBody extends StatelessWidget {
       child: Column(
         children: [
           const SafeArea(child: BookDetailsAppBar()),
+          const SizedBox(height: 10),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: width*.18),
+            padding: EdgeInsets.symmetric(horizontal: width*.21),
             child: const BookImage(),
-          )
+          ),
+          const SizedBox(height: 34),
+           SizedBox(
+             width: 200,
+             child: Text(
+              'Harry Potter and The Goblet Of Fire',
+               textAlign: TextAlign.center,
+              style: Styles.textStyle20.copyWith(fontWeight: FontWeight.bold),
+                       ),
+           ),
+          const SizedBox(height: 6),
+           Text(
+            'J.K. Rowling',
+            style: Styles.textStyle18.copyWith(
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.w500,
+              color: Colors.white70
+            ),
+          ),
         ],
       ),
     );

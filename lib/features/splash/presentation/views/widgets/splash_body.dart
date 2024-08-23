@@ -34,8 +34,12 @@ class _SplashBodyState extends State<SplashBody> with SingleTickerProviderStateM
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Image.asset(
-              AssetsData.logo,
+          SizedBox(
+            height: MediaQuery.of(context).size.height*0.3,
+            width: MediaQuery.of(context).size.width*0.1,
+            child: Image.asset(
+                AssetsData.logo,
+            ),
           ),
           AnimatedBuilder(
             animation: animation ,

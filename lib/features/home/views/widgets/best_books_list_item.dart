@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:folio/core/utils/app_router.dart';
-import 'package:folio/core/utils/assets.dart';
 import 'package:folio/core/utils/styles.dart';
+import 'package:folio/features/home/views/widgets/book_Image.dart';
 import 'package:go_router/go_router.dart';
 
 import 'book_rating.dart';
@@ -21,19 +21,9 @@ class BestBooksListItem extends StatelessWidget {
         padding: const EdgeInsets.only(left: 20.0 , right: 20 , bottom: 8),
         child: Row(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 125,
-              child: AspectRatio(
-                aspectRatio: 9 / 16,
-                child: Container(
-                  decoration:  BoxDecoration(
-                    borderRadius: BorderRadius.circular(16),
-                      image: const DecorationImage(
-                          fit: BoxFit.fill,
-                          image: AssetImage(AssetsData.test_logoApp))
-                  ),
-                ),
-              ),
+              child: BookImage(),
             ),
             const SizedBox(width: 30,),
             Expanded(
