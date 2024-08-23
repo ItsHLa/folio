@@ -48,7 +48,7 @@ class BestBooksListItem extends StatelessWidget {
                     children: [
                       Text(price,style: Styles.textStyle20.copyWith(fontWeight: FontWeight.bold),),
                       const Spacer(),
-                      const BookRating()
+                      const BookRating(mainAxisAlignment: MainAxisAlignment.start,)
                     ],
                   ),
                   const SizedBox(height: 3,),

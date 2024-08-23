@@ -34,18 +34,6 @@ class HomeViewBody extends StatelessWidget {
     )  ;
   }
 }
-/*
-* const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-
-          Expanded(child: BestBookListView())
-        ],
-      ),
-    )
-* */
 
 // we used customScrollView to make all the ui scroll
 // it only accept Slivers that's why we used SliverToBoxAdapter to put the widgets inside
