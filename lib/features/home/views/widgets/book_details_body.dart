@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:folio/features/home/views/widgets/book_Image.dart';
 import 'package:folio/features/home/views/widgets/book_rating.dart';
+import '../../../../constants.dart';
 import '../../../../core/utils/styles.dart';
 import 'book_details_listview.dart';
 import 'books_action.dart';
@@ -65,13 +66,12 @@ class BookDetailsBody extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  'nshgshgsgsgsfbsgufhgoufshgusfhgufhgufhguhfughfughuburghufhgufhgoufshgusfhgufhgufhguhfughfughuburghufhgufhgoufshgusfhgufhgufhguhfughfughusfugburghufhgufhgoufshgusfhgufhgufhguhfughfughu',
+                  about,
                   style: Styles.textStyle18.copyWith(
                       fontWeight: FontWeight.w500,
                       color: Colors.white
                   ),
                 ),
-
                 const SizedBox(height: 16,),
                 const BooksAction(),
                 const SizedBox(height : 16),

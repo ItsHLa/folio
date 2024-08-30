@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../constants.dart';
 import '../../../../core/widgets/custom_button.dart';
 class BooksAction extends StatelessWidget {
   const BooksAction({super.key});
@@ -20,7 +21,7 @@ class BooksAction extends StatelessWidget {
           ),
           CustomButton(
             label: 'preview',
-            backgroundColor: const Color(0xffEF8262),
+            backgroundColor:  kThemeColor,
             onPressed: (){},
             bottomLeft: 0,
             topLeft:0 ,
