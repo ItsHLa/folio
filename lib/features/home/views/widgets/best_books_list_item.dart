@@ -25,7 +25,7 @@ class BestBooksListItem extends StatelessWidget {
               height: 125,
               child: BookImage(),
             ),
-            const SizedBox(width: 30,),
+            const SizedBox(width: 16,),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
