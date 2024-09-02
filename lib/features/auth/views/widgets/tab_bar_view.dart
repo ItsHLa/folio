@@ -12,8 +12,8 @@ class AuthTabBarView extends StatelessWidget {
     return const Expanded(
       child: TabBarView(
         children: [
+          SignUp(),
           Login(),
-          SignUp()
         ],
       ),
     );

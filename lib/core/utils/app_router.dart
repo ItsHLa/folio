@@ -6,14 +6,19 @@ import '../../features/auth/views/auth_main_app_page_view.dart';
 import '../../features/splash/presentation/views/splash_view.dart';
 
 abstract class AppRouter{
+  static const kAuthPath = '/auth';
   static const kHomePath = '/homeView';
   static const kBookDetailsPath = '/BookDetails';
   static final route = GoRouter(
       routes: [
         GoRoute(
           path: '/',
-          builder: (context, state) => const BookDetailsView()
+          builder: (context, state) => const SplashView()
           //SplashView(),
+        ),
+        GoRoute(
+            path: kAuthPath,
+            builder: (context, state) => const AuthView()
         ),
         GoRoute(
           path: kHomePath,

@@ -59,7 +59,7 @@ class _SplashBodyState extends State<SplashBody> with SingleTickerProviderStateM
 
   void navigateToHomePage(){
     Future.delayed(const Duration(seconds: 3) , (){
-      GoRouter.of(context).push(AppRouter.kHomePath);
+      GoRouter.of(context).push(AppRouter.kAuthPath);
      // Get.to(const HomeView(),transition: Transition.leftToRightWithFade , duration: kTransitionDuration);
     });
   }

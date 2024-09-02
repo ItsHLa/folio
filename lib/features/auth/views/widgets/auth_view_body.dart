@@ -12,29 +12,28 @@ class AuthBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 2,
-      child: CustomScrollView(
-        slivers: [
-          SliverToBoxAdapter(
-            child: SizedBox(
-              height: MediaQuery.of(context).size.height*.25,
-                child: Image.asset(AssetsData.logoApp)),
-          ),
-          const SliverFillRemaining(
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 8.0),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+      child: DefaultTabController(
+        length: 2,
+        child: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(
+              child: SizedBox(
+                height: MediaQuery.of(context).size.height*.2,
+                  child: Image.asset(AssetsData.logoApp)),
+            ),
+            const SliverFillRemaining(
               child: Column(
                 children: [
                   AuthTabBar(),
                   AuthTabBarView(),
-                  AuthButton(label: 'Login'),
-                  SizedBox(height: 50,)
                 ],
               ),
             ),
-          )
-        ],
+
+          ],
+        ),
       ),
     );
   }

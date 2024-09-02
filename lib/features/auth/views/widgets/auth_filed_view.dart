@@ -11,26 +11,28 @@ class AuthFieldsBody extends StatefulWidget {
 
 class _AuthFieldsBodyState extends State<AuthFieldsBody> {
 
-  List label = ['User Name' , 'Phone Number' , 'Password'];
+  List label = ['UserName' , 'PhoneNumber' ,'Email', 'Password'];
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      padding: const EdgeInsets.only(top: 8),
-      itemCount: label.length,
-      itemBuilder: (context, index) => Column(
-        mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-                Text(label[index] , textAlign: TextAlign.start,),
-              const Spacer()
-            ],
-          ),
-          const SizedBox(height: 8,),
-          const AuthTextField(),
-        ],
+    return Expanded(
+      child: ListView.builder(
+        padding: const EdgeInsets.only(top: 8),
+        itemCount: label.length,
+        itemBuilder: (context, index) => Column(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                  Text(label[index] , textAlign: TextAlign.start,),
+                const Spacer()
+              ],
+            ),
+            const SizedBox(height: 2,),
+            const AuthTextField(),
+          ],
+        ),
       ),
     );
   }
